@@ -1,0 +1,16 @@
+title: M1-post-git
+description: git course
+template:
+  repo: m1-post-git-template
+  name: m1-post-git
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
